@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Veterinarian Dashboard</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+                <img src="../img/logo.jpg" alt="LivestockLink Logo" class="logo">
+            </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Clinical Examination</a>
+            </li>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reports</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Settings</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <!-- <button onclick="darkMode()">Dark mode</button> -->
+
+	<!-- Main Content -->
+	<main class="container-fluid mt-3">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card" id="card">
+					<div class="card-header" id="card-header">
+						<h4>Animals</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">You have 15 animals under your care.</p>
+						<a href="#" class="btn btn-primary">View Animals</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card" id="card">
+					<div class="card-header" id="card-header">
+						<h4>Vaccinations</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">You have 5 upcoming vaccinations.</p>
+						<a href="#" class="btn btn-primary">View Vaccinations</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card" id="card">
+					<div class="card-header" id="card-header">
+						<h4>Appointments</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">You have 3 upcoming appointments.</p>
+						<a href="#" class="btn btn-primary">View Appointments</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Bootstrap JS -->
+    <script src="../static/js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

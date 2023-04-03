@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LivestockLink Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="../img/logo.jpg" alt="LivestockLink Logo" class="logo">
+  </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <button onclick="darkMode()">Dark mode</button> -->
+  
+  <div class="container">
+    <h1 class="text-center my-4">Welcome to your LivestockLink Dashboard</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title">My Livestock</h4>
+          </div>
+          <div class="card-body">
+            <p>You currently have 20 cows and 30 goats on your farm. Click the button below to view more details about your livestock.</p>
+            <a href="#" class="btn btn-primary">View Livestock</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+				<div class="card">
+					<div class="card-header">
+						<h4>Vaccinations</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">You have 5 upcoming vaccinations.</p>
+						<a href="#" class="btn btn-primary">View Vaccinations</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-header">
+						<h4>Appointments</h4>
+					</div>
+					<div class="card-body">
+						<p class="card-text">You have 3 upcoming appointments.</p>
+						<a href="#" class="btn btn-primary">View Appointments</a>
+					</div>
+				</div>
+			</div>
+      </div>
+    </div>
+  </div>
+  <script src="../static//js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
