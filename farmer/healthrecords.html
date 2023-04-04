@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add New Animal</title>
+    <link rel = "icon" href ="../img/logo.jpg" type = "image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/farmer.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo.jpg" alt="LivestockLink Logo" class="logo">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <button onclick="darkMode()">Dark mode</button>
+	<h1>Health Record</h1>
+	<form id="signup-form">
+        <div class="form-group">
+          <label for="animal-id">Animal:</label>
+          <select name="animal-type" id="animal-type" class="form-control">
+			<option value="cattle">Cattle</option>
+			<option value="sheep">Sheep</option>
+			<option value="goat">Goat</option>
+            <option value="horse">Horse</option>
+            <option value="horse">Pigs</option>
+            <option value="horse">Other</option>
+		</select>
+        </div>
+        <div>
+          <label for="health-issue">Health Issue:</label>
+          <input type="text" id="health-issue" name="health-issue" class="form-control">
+        </div>
+        <div>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" class="form-control">
+        </div>
+        <div>
+          <label for="treatment">Treatment:</label>
+          <textarea id="treatment" name="treatment" class="form-control"></textarea>
+        </div>
+        <div>
+          <label for="notes">Notes:</label>
+          <textarea id="notes" name="notes" class="form-control"></textarea>
+        </div><br>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </form>
+      
+    <footer>
+        <div class="container">
+          <p>&copy; LivestockLink 2023</p>
+        </div>
+    </footer>
+    <script src="../static/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

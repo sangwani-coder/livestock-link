@@ -19,3 +19,22 @@
     color: green;
 
 }
+button {
+    align-items: center;
+}
+
+#container {
+    height: 50px;
+    position: relative;
+    border: 1px solid rgb(118, 122, 118);
+    width:auto;
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add New Animal</title>
+    <link rel = "icon" href ="../img/logo.jpg" type = "image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/farmer.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../img/logo.jpg" alt="LivestockLink Logo" class="logo">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <button onclick="darkMode()">Dark mode</button>
+	<h1>Add New Animal</h1>
+	<form id="signup-form">
+		<label for="animal-type">Animal Type:</label>
+		<select name="animal-type" id="animal-type" class="form-control">
+			<option value="cattle">Cattle</option>
+			<option value="sheep">Sheep</option>
+			<option value="goat">Goat</option>
+            <option value="horse">Horse</option>
+            <option value="horse">Pigs</option>
+            <option value="horse">Other</option>
+		</select>
+		<br><br>
+        <div class="form-group" >
+            <label for="animal-picture">Animal Picture:</label>
+            <input class=".form-control" type="file" id="animal-picture" name="animal-picture" placeholder="Animal name"><br><br>
+            <label class="sr-only" for="animal-name">Animal Name:</label>
+            <input class=".form-control" type="text" id="animal-name" name="animal-name" placeholder="Animal name"><br><br>
+            <label class="sr-only" for="animal-breed">Animal Breed:</label>
+            <input class=".form-control" type="text" id="animal-breed" name="animal-breed" placeholder="Breed"><br><br>
+            <label for="date-of-birth">Animal Date of Birth:</label>
+            <input class=".form-control" type="date" id="date-of-birth" name="date-of-birth" placeholder="Date-of-birth"><br><br>
+            <label for="animal-weight">Animal Weight:</label>
+            <input class=".form-control" type="number" id="animal-weight" name="animal-weight" placeholder="animal-weight"> in kg<br><br>
+            <label for="animal-sex">Animal Sex:</label>
+            <input class=".form-control" type="radio" id="animal-sex-male" name="animal-sex" value="male">
+            <label for="animal-sex-male">Male</label>
+            <input class=".form-control" type="radio" id="animal-sex-female" name="animal-sex" value="female">
+            <label for="animal-sex-female">Female</label><br><br>
+            <input class=".form-control" type="radio" id="pregnancy" name="pregnancy" value="pregnant">
+            <label for="pregnancy">Is pregnant</label><br><br>
+            <input class="btn btn-primary" type="submit" value="Add Animal">
+        </div>
+	</form>
+    <footer>
+        <div class="container">
+          <p>&copy; LivestockLink 2023</p>
+        </div>
+    </footer>
+    <script src="../static/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
