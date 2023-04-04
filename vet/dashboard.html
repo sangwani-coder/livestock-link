@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Veterinarian Dashboard</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="../static/css/dashboard.css">
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LivestockLink Dashboard</title>
+  <link rel = "icon" href ="../img/logo.jpg" type = "image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/dashboard.css">
 </head>
 <body>
 	<!-- Navbar -->
@@ -17,13 +18,10 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Clinical Examination</a>
-            </li>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Dashboard</a>
+						<a class="nav-link" href="dashboard.html">Dashboard</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Reports</a>
@@ -41,7 +39,7 @@
     <button onclick="darkMode()">Dark mode</button>
 
 	<!-- Main Content -->
-	<main class="container-fluid mt-3">
+	<main class="container">
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card" id="card">
@@ -77,7 +75,24 @@
 				</div>
 			</div>
 		</div>
+		<!-- Buttons -->
+	<br>
+	<br>
+	<div id="container">
+	  <div class="vertical-center">
+		<div class="btn-toolbar">
+		  <button class="btn btn-primary" type="submit" onclick="location.href='clinic_exam.html'">Clinical Exam</button><span class=""></span>
+		  <button class="btn btn-primary" type="submit" onclick="location.href='healthrecords.html'">Create Appointment</button><span></span>
+		</div>
+	  </div>
+	</div>
+	<!-- End Buttons -->
 	</main>
+	<footer>
+		<div class="container">
+		  <p>&copy; LivestockLink 2023</p>
+		</div>
+	  </footer>
 
 	<!-- Bootstrap JS -->
     <script src="../static/js/script.js"></script>

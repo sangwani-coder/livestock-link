@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vet Clinical Examination Data</title>
+    <link rel = "icon" href ="../img/logo.jpg" type = "image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/vet.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+                <img src="../img/logo.jpg" alt="LivestockLink Logo" class="logo">
+            </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="dashboard.html">Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Reports</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Settings</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <button onclick="darkMode()">Dark mode</button>
+
+    <header>
+      <h1>Vet Clinical Examination Data</h1>
+    </header>
+    <main class="">
+      <section id="animal-section" class="tab">
+        <h2>Animal Information</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="animal-id">Animal ID:</label>
+                <input class="form-control" type="text" id="animal-id" name="animal-id"><br>
+                <label for="animal-type">Animal Type:</label>
+                <select class="form-control" id="animal-type" name="animal-type">
+                    <option value="cattle">Cattle</option>
+                    <option value="sheep">Sheep</option>
+                    <option value="goat">Goat</option>
+                </select><br>
+                <label for="animal-breed">Animal Breed:</label>
+                <input class="form-control" type="text" id="animal-breed" name="animal-breed"><br>
+            </div>
+        </form>
+      </section>
+      <section id="clinical-examination-section" class="tab">
+        <h2>Clinical Examination Information</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="body-temperature">Body Temperature:</label>
+                <input class="form-control" type="number" id="body-temperature" name="body-temperature"><br>
+                <label for="heart-rate">Heart Rate:</label>
+                <input class="form-control" type="number" id="heart-rate" name="heart-rate"><br>
+                <label for="respiratory-rate">Respiratory Rate:</label>
+                <input class="form-control" type="number" id="respiratory-rate" name="respiratory-rate"><br>
+            </div>
+        </form>
+      </section>
+      <!-- vaccines -->
+      <section id="clinical-examination-section" class="tab">
+        <h2>Vaccinations</h2>
+        <form id="signup-form">
+            <div class="table-responsive">
+                <div class="table-bordered">
+                    <table id="animal-table" class="table-hover">
+                        <thead>
+                          <tr>
+                              <th>Vaccine</th>
+                              <th>Frequency</th>
+                              <th>Last given</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anthrax</td>
+                                <td><input class="" name="frequency" type="number"></td>
+                                <td><input class="" name="date" type="date"></td>
+                              </tr>
+                              <tr>
+                                <td>Blackleg</td>
+                                <td><input class="" name="frequency" type="number"></td>
+                                <td><input class="" name="date" type="date"></td>
+                              </tr>
+                              <tr>
+                                <td>Rabies</td>
+                                <td><input class="" name="frequency" type="number"></td>
+                                <td><input class="" name="date" type="date"></td>
+                              </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </form>
+      </section>
+      <!-- dipping -->
+      <section id="clinical-examination-section" class="tab">
+        <h2>More Information</h2>
+        <form id="signup-form">
+            <div class="table-responsive">
+                <div class="table-bordered">
+                    <table id="animal-table" class="table-hover">
+                        <thead>
+                          <tr>
+                              <th>Item</th>
+                              <th>Products Used</th>
+                              <th>Frequency</th>
+                              <th>Last given</th>
+                              <th>Dose</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dipping</td>
+                                <td><input class="" name="products" type="text"></td>
+                                <td><input class="" name="frequency" type="number"></td>
+                                <td><input class="" name="date" type="date"></td>
+                                <td><input class="" name="dose" type="text"></td>
+                              </tr>
+                              <tr>
+                                <td>Deworming</td>
+                                <td><input class="" name="products" type="text"></td>
+                                <td><input class="" name="frequency" type="number"></td>
+                                <td><input class="" name="date" type="date"></td>
+                                <td><input class="" name="dose" type="text"></td>
+                              </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </form>
+      </section>
+      <!-- end dipping -->
+      <!-- Other information -->
+      <section id="clinical-examination-section" class="tab">
+        <h2>Clinical Examination Information</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="herd-problems">Other Herd Health Problems:</label>
+                <input class="form-control" type="text" id="herd-problems" name="herd-problems"><br>
+                <label for="production-problems">Production Problems:</label>
+                <input class="form-control" type="text" id="production-problems" name="production-problems"><br>
+                <label for="environment">Environment:</label>
+                <input class="form-control" type="text" id="environment" name="environment"><br>
+                <label for="housing">Housing:</label>
+                <input class="form-control" type="text" id="housing" name="housing"><br>
+                <label for="water-source">Water Source:</label>
+                <input class="form-control" type="text" id="water-source" name="water-source"><br>
+                <label for="diet-source-changes">Diet/Source/Changes:</label>
+                <input class="form-control" type="text" id="diet-source-changes" name="diet-source-changes"><br>
+                <label for="supplementation">Supplementation:</label>
+                <input class="form-control" type="text" id="supplementation" name="supplementation"><br>
+                <label for="other">Other:</label>
+                <input class="form-control" type="text" id="other" name="other"><br>
+            </div>
+        </form>
+      </section>
+      <!-- end other information -->
+      <!-- end vaccines -->
+      <!-- next and prev buttons -->
+      <section id="submit-section">
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button class="btn btn-primary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button class="btn btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+      </section>
+    </main>
+    <footer>
+		<div class="container">
+		  <p>&copy; LivestockLink 2023</p>
+		</div>
+	  </footer>
+
+	<!-- Bootstrap JS -->
+    <script src="../static/js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

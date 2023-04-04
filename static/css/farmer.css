@@ -51,3 +51,8 @@ h1 {
     text-align: center;
     margin-top: 50px;
 }
+
+.dark-mode {
+    background-color: rgb(5, 5, 5);
+    color: rgb(11, 85, 4);
+  }

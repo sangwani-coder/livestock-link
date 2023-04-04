@@ -68,3 +68,8 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #357a38;
 }
+
+.dark-mode {
+  background-color: rgb(5, 5, 5);
+  color: rgb(11, 85, 4);
+}
