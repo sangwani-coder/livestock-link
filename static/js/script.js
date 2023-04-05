@@ -45,26 +45,6 @@ appointmentForm.addEventListener('submit', (e) => {
 	appointmentForm.reset();
 });
 
-// Search functionality
-
-// function search() {
-//     const searchInput = document.getElementById("search-input");
-//     const tableRows = document.querySelectorAll("table tbody tr");
-
-//     searchInput.addEventListener("input", function() {
-//         const searchQuery = this.value.toLowerCase();
-//         tableRows.forEach(function(row) {
-//         const animalType = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
-//         const animalBreed = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
-//         const animalID = row.querySelector("td:nth-child(0)").textContent.toLowerCase();
-//         if (animalType.includes(searchQuery) || animalBreed.includes(searchQuery) || animalID.includes(searchQuery)) {
-//             row.style.display = "block";
-//             } else {
-//             row.style.display = "none";
-//     }
-// });
-// });
-// }
 function search() {
     var input, filter, table, tr, animalType, animalID, i, txtValue;
     input = document.getElementById("search-input");
@@ -177,6 +157,26 @@ function showTab(n) {
   fixStepIndicator(n)
 }
 
+// Skip function
+// function Skip(n) {
+//   // This function will figure out which tab to display
+//   var x = document.getElementsByClassName("tab");
+//   // Exit the function if any field in the current tab is invalid:
+//   // Hide the current tab:
+//   x[currentTab].style.display = "none";
+//   // Increase or decrease the current tab by 1:
+//   currentTab = currentTab + n;
+//   document.getElementsByClassName("step")[currentTab].className += " finish"
+//   // if you have reached the end of the form... :
+//   if (currentTab >= x.length) {
+//     //...the form gets submitted:
+//     document.getElementById("regForm").submit();
+//     return false;
+//   }
+//   // Otherwise, display the correct tab:
+//   showTab(currentTab);
+// }
+
 function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
@@ -208,7 +208,7 @@ function validateForm() {
       // add an "invalid" class to the field:
       y[i].className += " invalid";
       // and set the current valid status to false:
-      valid = false;
+      valid = true;
     }
   }
   // If the valid status is true, mark the step as finished and valid:
@@ -227,4 +227,30 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
-  
+
+
+// Add input fields dynamicallly
+
+function addField(id) {
+
+  var name = id + '[]'
+  // creating the input element
+  var field = document.createElement("input");
+  field.setAttribute("type", "text");
+  field.setAttribute("name", name);
+  field.setAttribute("class", "form-control")
+  field.setAttribute("placeholder", id + ' problems') 
+
+  var div = document.getElementById(id)
+  div.appendChild(field);
+
+}
+
+//  Remove an Input field
+function removeField(id){
+  var herd = document.getElementById(id)
+  var input_tags = herd.getElementsByTagName("input");
+  if (input_tags.length > 1) {
+    herd.removeChild(input_tags[(input_tags.length) - 1]);
+  }
+}

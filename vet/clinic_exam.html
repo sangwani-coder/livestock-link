@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vet Clinical Examination Data</title>
+    <title>Clinical Examination Data</title>
     <link rel = "icon" href ="../img/logo.jpg" type = "image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/vet.css">
@@ -37,42 +37,76 @@
     <button onclick="darkMode()">Dark mode</button>
 
     <header>
-      <h1>Vet Clinical Examination Data</h1>
+      <h2>Clinical Examination</h2>
     </header>
     <main class="">
-      <section id="animal-section" class="tab">
-        <h2>Animal Information</h2>
+      <section id="owner-section" class="tab">
+        <h3>Owner Details</h3>
         <form id="signup-form">
             <div class="form-group">
-                <label for="animal-id">Animal ID:</label>
+                <label for="name">Name:</label>
+                <input class="form-control" type="text" id="name" name="name"><br>
+                <label for="telephone">Tel:</label>
+                <input class="form-control" type="text" id="telephone" name="telephone"><br>
+                <label for="email">Email:</label>
+                <input class="form-control" type="text" id="email" name="email"><br>
+            </div>
+        </form>
+      </section>
+      <section id="animal-section" class="tab">
+        <h3>Signalment</h3>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="animal-id">Animal Name/ID:</label>
                 <input class="form-control" type="text" id="animal-id" name="animal-id"><br>
-                <label for="animal-type">Animal Type:</label>
-                <select class="form-control" id="animal-type" name="animal-type">
+                <label for="animal-breed">Breed:</label>
+                <select class="form-control" id="animal-breed" name="animal-breed">
                     <option value="cattle">Cattle</option>
                     <option value="sheep">Sheep</option>
                     <option value="goat">Goat</option>
                 </select><br>
-                <label for="animal-breed">Animal Breed:</label>
-                <input class="form-control" type="text" id="animal-breed" name="animal-breed"><br>
+                <label for="animal-sex">Sex:</label>
+                <select class="form-control" id="animal-sex" name="animal-sex">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select><br>
+                <label for="animal-age">Age:</label>
+                <input type="number" class="form-control" id="animal-age" name="animal-age"><br>
+                <label for="animal-color">Animal Colour:</label>
+                <select>
+                  <option value="red">Red</option>
+                  <option value="black">Black</option>
+                  <option value="white">White</option>
+                  <option value="Brown">Brown</option>
+                </select><br>
+                <label for="herd-size">Herd Size:</label>
+                <input type="number" class="form-control" id="herd-size" name="herd-size"><br>
             </div>
         </form>
       </section>
-      <section id="clinical-examination-section" class="tab">
-        <h2>Clinical Examination Information</h2>
+      <section id="treatment-given-section" class="tab">
         <form id="signup-form">
             <div class="form-group">
-                <label for="body-temperature">Body Temperature:</label>
-                <input class="form-control" type="number" id="body-temperature" name="body-temperature"><br>
-                <label for="heart-rate">Heart Rate:</label>
-                <input class="form-control" type="number" id="heart-rate" name="heart-rate"><br>
-                <label for="respiratory-rate">Respiratory Rate:</label>
-                <input class="form-control" type="number" id="respiratory-rate" name="respiratory-rate"><br>
+              <h4>Has Treatment been given?</h4>
+                <label for="yes">Yes:</label>
+                <input class="" type="radio" id="yes" name="yes-no">
+                <label for="no">No:</label>
+                <input class="" type="radio" id="no" name="yes-no"><br>
+                <h4>If yes,</h4>
+                <label for="treatment-date">Date:</label>
+                <input class="form-control" type="date" id="treatment-date" name="treatment-date">
+                <label for="treatment-dose">How Much?:</label>
+                <input class="form-control" type="text" id="treatment-dose" name="treatment-dose">
+                <label for="treatment">What Treatment?:</label>
+                <input class="form-control" type="text" id="treatment" name="treatment"><br>
+                <label for="response">Response?:</label>
+                <input class="form-control" type="text" id="response" name="response"><br>
             </div>
         </form>
       </section>
       <!-- vaccines -->
-      <section id="clinical-examination-section" class="tab">
-        <h2>Vaccinations</h2>
+      <section id="vaccination-section" class="tab">
+        <h3>Vaccinations</h3>
         <form id="signup-form">
             <div class="table-responsive">
                 <div class="table-bordered">
@@ -87,18 +121,18 @@
                         <tbody>
                             <tr>
                                 <td>Anthrax</td>
-                                <td><input class="" name="frequency" type="number"></td>
-                                <td><input class="" name="date" type="date"></td>
+                                <td><input class="form-control" name="frequency" type="number"></td>
+                                <td><input class="form-control" name="date" type="date"></td>
                               </tr>
                               <tr>
                                 <td>Blackleg</td>
-                                <td><input class="" name="frequency" type="number"></td>
-                                <td><input class="" name="date" type="date"></td>
+                                <td><input class="form-control" name="frequency" type="number"></td>
+                                <td><input class="form-control" name="date" type="date"></td>
                               </tr>
                               <tr>
                                 <td>Rabies</td>
-                                <td><input class="" name="frequency" type="number"></td>
-                                <td><input class="" name="date" type="date"></td>
+                                <td><input class="form-control" name="frequency" type="number"></td>
+                                <td><input class="form-control" name="date" type="date"></td>
                               </tr>
                         </tbody>
                       </table>
@@ -107,8 +141,8 @@
         </form>
       </section>
       <!-- dipping -->
-      <section id="clinical-examination-section" class="tab">
-        <h2>More Information</h2>
+      <section id="other-examination-section" class="tab">
+        <h3>More Information</h3>
         <form id="signup-form">
             <div class="table-responsive">
                 <div class="table-bordered">
@@ -125,17 +159,17 @@
                         <tbody>
                             <tr>
                                 <td>Dipping</td>
-                                <td><input class="" name="products" type="text"></td>
-                                <td><input class="" name="frequency" type="number"></td>
-                                <td><input class="" name="date" type="date"></td>
-                                <td><input class="" name="dose" type="text"></td>
+                                <td><input class="form-control" name="products" type="text"></td>
+                                <td><input class="form-control" name="frequency" type="number"></td>
+                                <td><input class="form-control" name="date" type="date"></td>
+                                <td><input style="width: auto;" class="form-control" name="dose" type="number"></td>
                               </tr>
                               <tr>
                                 <td>Deworming</td>
-                                <td><input class="" name="products" type="text"></td>
-                                <td><input class="" name="frequency" type="number"></td>
-                                <td><input class="" name="date" type="date"></td>
-                                <td><input class="" name="dose" type="text"></td>
+                                <td><input class="form-control" name="products" type="text"></td>
+                                <td><input class="form-control" name="frequency" type="number"></td>
+                                <td><input class="form-control" name="date" type="date"></td>
+                                <td><input class="form-control" name="dose" type="number"></td>
                               </tr>
                         </tbody>
                       </table>
@@ -146,17 +180,40 @@
       <!-- end dipping -->
       <!-- Other information -->
       <section id="clinical-examination-section" class="tab">
-        <h2>Clinical Examination Information</h2>
+        <h3>More Information</h3>
         <form id="signup-form">
             <div class="form-group">
+              <div class="field" id="herd">
                 <label for="herd-problems">Other Herd Health Problems:</label>
-                <input class="form-control" type="text" id="herd-problems" name="herd-problems"><br>
+                <input class="form-control" type="text" id="herd-problems" name="herd-problems[]" placeholder="herd problems">
+                <span onclick="addField('herd')" class="add-field">+</span>
+                <span onclick="removeField('herd')" class="remove-field">-</span>
+              </div>
+              <div class="field" id="production">
                 <label for="production-problems">Production Problems:</label>
-                <input class="form-control" type="text" id="production-problems" name="production-problems"><br>
+                <input class="form-control" type="text" id="production-problems" name="production-problems" placeholder="production problems">
+                <span onclick="addField('production')" class="add-field">+</span>
+                <span onclick="removeField('production')" class="remove-field">-</span>
+              </div>
+              <div class="field" id="environment">
                 <label for="environment">Environment:</label>
-                <input class="form-control" type="text" id="environment" name="environment"><br>
+                <input class="form-control" type="text" id="environment" name="environment" placeholder="environment problems">
+                <span onclick="addField('environment')" class="add-field">+</span>
+                <span onclick="removeField('environment')" class="remove-field">-</span>
+              </div>
+              <div class="field" id="housing">
                 <label for="housing">Housing:</label>
-                <input class="form-control" type="text" id="housing" name="housing"><br>
+                <input class="form-control" type="text" id="housing" name="housing" placeholder="housing problems">
+                <span onclick="addField('housing')" class="add-field">+</span>
+                <span onclick="removeField('housing')" class="remove-field">-</span>
+              </div>
+            </div>
+        </form>
+      </section>
+      <section id="clinical-examination-section" class="tab">
+        <h3>More Information</h3>
+        <form id="signup-form">
+            <div class="form-group">
                 <label for="water-source">Water Source:</label>
                 <input class="form-control" type="text" id="water-source" name="water-source"><br>
                 <label for="diet-source-changes">Diet/Source/Changes:</label>
@@ -168,19 +225,23 @@
             </div>
         </form>
       </section>
+      <br>
       <!-- end other information -->
       <!-- end vaccines -->
       <!-- next and prev buttons -->
       <section id="submit-section">
-        <div style="overflow:auto;">
-            <div style="float:right;">
+        <div class="nav-btn">
+            <div class="">
                 <button class="btn btn-primary" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <!-- <button class="btn btn-primary" type="button" id="skipBtn" onclick="skip(1)">Skip</button> -->
                 <button class="btn btn-primary" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
             </div>
         </div>
-
+        <br>
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>

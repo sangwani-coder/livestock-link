@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add New Animal</title>
+	<title>Health Record</title>
     <link rel = "icon" href ="../img/logo.jpg" type = "image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -32,16 +32,24 @@
       <button onclick="darkMode()">Dark mode</button>
 	<h1>Health Record</h1>
 	<form id="signup-form">
+    <div>
+      <label for="vet">Veterinarian:</label>
+      <select name="vet" id="vet">
+        <option value="chola">Dr. Chola</option>
+        <option value="chitebe">Dr. Chitebe</option>
+        <option value="sililo">Mr. Obby Sililo</option>
+      </select>
+    </div><br>
         <div class="form-group">
-          <label for="animal-id">Animal:</label>
+          <label for="animal-id">Animal Name/ID:</label>
           <select name="animal-type" id="animal-type" class="form-control">
-			<option value="cattle">Cattle</option>
-			<option value="sheep">Sheep</option>
-			<option value="goat">Goat</option>
+            <option value="cattle">Cattle</option>
+            <option value="sheep">Sheep</option>
+            <option value="goat">Goat</option>
             <option value="horse">Horse</option>
             <option value="horse">Pigs</option>
             <option value="horse">Other</option>
-		</select>
+		      </select>
         </div>
         <div>
           <label for="health-issue">Health Issue:</label>

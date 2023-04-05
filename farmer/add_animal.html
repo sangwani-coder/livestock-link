@@ -32,7 +32,7 @@
       <button onclick="darkMode()">Dark mode</button>
 	<h1>Add New Animal</h1>
 	<form id="signup-form">
-		<label for="animal-type">Animal Type:</label>
+		<label for="animal-type">Breed:</label>
 		<select name="animal-type" id="animal-type" class="form-control">
 			<option value="cattle">Cattle</option>
 			<option value="sheep">Sheep</option>
@@ -44,22 +44,20 @@
 		<br><br>
         <div class="form-group" >
             <label for="animal-picture">Animal Picture:</label>
-            <input class=".form-control" type="file" id="animal-picture" name="animal-picture" placeholder="Animal name"><br><br>
-            <label class="sr-only" for="animal-name">Animal Name:</label>
-            <input class=".form-control" type="text" id="animal-name" name="animal-name" placeholder="Animal name"><br><br>
-            <label class="sr-only" for="animal-breed">Animal Breed:</label>
-            <input class=".form-control" type="text" id="animal-breed" name="animal-breed" placeholder="Breed"><br><br>
+            <input class=".form-control" type="file" id="animal-picture" name="animal-picture"><br><br>
+            <label for="animal-name">Animal Name/ID:</label>
+            <input class=".form-control" type="text" id="animal-name" name="animal-name" placeholder="Animal name/ID"><br>
             <label for="date-of-birth">Animal Date of Birth:</label>
-            <input class=".form-control" type="date" id="date-of-birth" name="date-of-birth" placeholder="Date-of-birth"><br><br>
+            <input class=".form-control" type="date" id="date-of-birth" name="date-of-birth" placeholder="Date-of-birth"><br>
             <label for="animal-weight">Animal Weight:</label>
-            <input class=".form-control" type="number" id="animal-weight" name="animal-weight" placeholder="animal-weight"> in kg<br><br>
+            <input class=".form-control" type="number" id="animal-weight" name="animal-weight" placeholder="animal-weight"> in kg<br>
             <label for="animal-sex">Animal Sex:</label>
             <input class=".form-control" type="radio" id="animal-sex-male" name="animal-sex" value="male">
             <label for="animal-sex-male">Male</label>
             <input class=".form-control" type="radio" id="animal-sex-female" name="animal-sex" value="female">
-            <label for="animal-sex-female">Female</label><br><br>
+            <label for="animal-sex-female">Female</label><br>
             <input class=".form-control" type="radio" id="pregnancy" name="pregnancy" value="pregnant">
-            <label for="pregnancy">Is pregnant</label><br><br>
+            <label for="pregnancy">Is pregnant</label><br>
             <input class="btn btn-primary" type="submit" value="Add Animal">
         </div>
 	</form>
