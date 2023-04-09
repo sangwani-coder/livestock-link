@@ -27,23 +27,23 @@ function darkMode() {
 
 }
 
-// Appointment function
-const appointmentForm = document.querySelector('#signup-form');
+// // Appointment function
+// const appointmentForm = document.querySelector('#signup-form');
 
-appointmentForm.addEventListener('submit', (e) => {
-	e.preventDefault();
-	// Get the values from the form
-	const vetName = appointmentForm['vet-name'].value;
-	const date = appointmentForm['date'].value;
-	const time = appointmentForm['time'].value;
-	const reason = appointmentForm['reason'].value;
+// appointmentForm.addEventListener('submit', (e) => {
+// 	e.preventDefault();
+// 	// Get the values from the form
+// 	const vetName = appointmentForm['vet-name'].value;
+// 	const date = appointmentForm['date'].value;
+// 	const time = appointmentForm['time'].value;
+// 	const reason = appointmentForm['reason'].value;
 
-	// Do something with the values (e.g. send them to the server)
-	console.log(vetName, date, time, reason);
+// 	// Do something with the values (e.g. send them to the server)
+// 	console.log(vetName, date, time, reason);
 
-	// Clear the form
-	appointmentForm.reset();
-});
+// 	// Clear the form
+// 	appointmentForm.reset();
+// });
 
 function search() {
     var input, filter, table, tr, animalType, animalID, i, txtValue;
